@@ -10,7 +10,13 @@ billInput.value = 999.88 // Set the value to 999.88
 function calculateTip() {
     const billValue = billInput.value
     const tipValue = tipInput.value
+
     const tipAmount = billValue * tipValue / 100
+
     display.innerHTML = tipAmount
 }
+
+billInput.addEventListener('input', calculateTip)
+tipInput.addEventListener('input', calculateTip)
+
 calculateTip()
