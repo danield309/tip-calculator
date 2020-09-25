@@ -5,7 +5,7 @@ const tipInput = document.querySelector('#tip')
 console.log(display.innerHTML) // prints the text inside the tags
 console.log(billInput.value) // prints the value entered into the input
 
-billInput.value = 999.88 // Set the value to 999.88
+billInput.value = '' // Set the value to 999.88
 
 function calculateTip() {
     const billValue = billInput.value
@@ -14,6 +14,8 @@ function calculateTip() {
     const tipAmount = billValue * tipValue / 100
 
     display.innerHTML = tipAmount
+
+
 }
 
 billInput.addEventListener('input', calculateTip)
